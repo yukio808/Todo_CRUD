@@ -1,11 +1,11 @@
 doctype
 html
   head
-    link(href='css/styles.css', rel='stylesheet', media='screen')
+    link(href='/css/styles.css', rel='stylesheet', media='screen')
   body
     form(action='/todos', method='post')
       fieldset
         div.listName
           button#save Save
           input(type="text", name="todo", placeholder="todo")
-          input(type="text", name="details", placeholder="details")
+          textarea(type="text", name="details", placeholder="details")

@@ -1,15 +1,15 @@
 1.  layout of page
 2.  backend start figuring out our links.
-  -get'/'
-    render the todolist jade html
-  -get'/new-todo'
-    render todo create page
-  -post'/todos'
+  -get'/'√
+    render the todolist jade html √
+  -get'/new-todo'√
+    render todo create page√
+  -post'/todos'√
     post a todo list item from the newtodo text input
-  -put'/todos/:id/complete'
-    updates todo and redirects to the homepage
+  -put'/todos/:id/complete'√
+    updates todo
   -put'/todos/:id/uncompleted'
-    updates todo and redirects to the homepage
+    updates todo
   -delete'/todos/:id'
     delets todo and redirects to the homepage
   -get'/todos/:id/edit'
@@ -24,3 +24,7 @@
 8.
 9.
 10.
+
+
+
+

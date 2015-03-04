@@ -16,7 +16,7 @@ var listSchema = new Schema({
 //// Setting server post functionality to database
 var ListItem = mongoose.model('ListItem' , listSchema);
 
-app.use(express.static(__dirname, + '/public'));
+app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended : true}));
 app.use(bodyParser.json());
 app.set('view engine', 'jade');
@@ -55,31 +55,40 @@ app.post('/todos', function (req, res){
   console.log(newListItem);
 });
 
-// app.put('/todos/:id/complete', function (req, res){
-//   var id = req.body.id;
-//   var isdone = req.body.is_done;
+app.put('/todos/:id/complete', function (req,  res){
+  console.log(req.params.id);
+  ListItem.update({_id : req.params.id}, { is_done : true}, function (err) {
+    if (err) throw err;
+    res.send("ok");
+  });
+});
 
-//   ListItem.update({ id : _id }, { $set : { is_done : isdone } }, function (err){
-//     if(err) throw err;
-//     console.log("UPDATED FROM FALSE TO TRUE");
-//   });
-// });
+app.put('/todos/:id/uncomplete', function (req,  res){
+  ListItem.update({_id : req.params.id}, { is_done : false}, function (err){
+    if(err) throw err;
+    res.send("ok");
+  });
+});
 
 app.delete('/todos/:id', function (req, res){
   console.log("test10101010101010", req.params.id);
   ListItem.remove({_id : req.params.id}, function (err, ListItem) {
-    res.send("ok" + ListItem._id + "deleted");
+    res.redirect('/');
   });
 });
-// app.get('/', function (req, res){
-//   ListItem.findById(req.params.id, function (err, list){
-//     if (err) throw err;
-//     res.render('to_do_list', { newListItem : newListItem });
-//   });
 
-// });
-
-
+app.get('/todos/:id/edit', function (req, res){
+  console.log("Connected to ahah");
+  ListItem.find({_id : req.params.id}, function (err, listItems){
+    console.log(typeof listItems);
+    res.render('edit', { listItems : listItems });
+  });
+});
+app.put('/todos/:id/edit', function (req, res){
+  ListItem.update({_id : req.params.id}, { todo : req.body.todo, details : req.body.details }, function (err, listItem){
+    res.redirect('/');
+  });
+});
 
 ///// Server start
 var server = app.listen(3000, function(){
