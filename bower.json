@@ -1,0 +1,19 @@
+{
+  "name": "Todo_CRUD",
+  "version": "0.0.0",
+  "homepage": "https://github.com/yukio808/Todo_CRUD",
+  "authors": [
+    "yukio yamamoto <aj.yamamoto@me.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "~5.5.1"
+  }
+}

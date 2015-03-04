@@ -9,7 +9,7 @@ $(function(){
         //   is_done: true
         // },
       });
-      alert('sent PUT request to '+'/todos/' +'/complete');
+      // alert('sent PUT request to '+'/todos/' +'/complete');
     }else{
       $.ajax({
         url     : "/todos/" + doc_id + "/uncomplete",
@@ -18,7 +18,7 @@ $(function(){
         //   is_done : true
         // }
       });
-      alert('sent PUT request to '+'/todos/' +'/uncomplete');
+      // alert('sent PUT request to '+'/todos/' +'/uncomplete');
     }
   });
   $('div.toDo section.list form button').on('click', function (){

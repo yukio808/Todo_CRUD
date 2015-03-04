@@ -1,6 +1,7 @@
 doctype
 html
   head
+    //- link(href='/css/reset.css', rel='stylesheet', media='screen')
     link(href='/css/styles.css', rel='stylesheet', media='screen')
     script(type='text/javascript', src='http://code.jquery.com/jquery-1.10.2.min.js')
     script(src='/js/to_do.js')
@@ -11,12 +12,12 @@ html
       section.list
         each listItem in listItems
           a(href='/todos/#{listItem._id}/edit')
+            input.checkbox(type="checkbox", data-list="#{listItem._id}" action="/todos/#{listItem._id}/complete", method="PUT")
             p!= listItem.todo
             div!= listItem.details
-            p!= listItem._id
-          input(type="checkbox", data-list="#{listItem._id}" action="/todos/#{listItem._id}/complete", method="PUT")
-          form(action="/todos/#{listItem._id}?_method=DELETE", method="POST")
+            form.clearfix(action="/todos/#{listItem._id}?_method=DELETE", method="POST")
               //- button acts as "submit" to issue the POST request (really DELETE)
-            button x
+              button x
+            //- p!= listItem._id
     a(href="/new-todo/")
       button new
