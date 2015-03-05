@@ -11,5 +11,5 @@ html
       fieldset
         div.listEdit
           button#save Save
-          input(type="text", name="todo", value="#{listItems[0].todo}", data-list="#{listItems[0]._id}")
-          textarea(type="text", name="details", data-list="#{listItems[0]._id}")= listItems[0].details
+          input(type="text", name="todo", value="#{listItems[0].todo}", data-list="#{listItems[0]._id}", maxlength="100")
+          textarea(type="text", name="details", data-list="#{listItems[0]._id}", maxlength="450")= listItems[0].details

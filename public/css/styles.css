@@ -87,11 +87,7 @@ img {
   content: " ";
   display: table; }
 .clearfix:after {
-   content: " "; /* Older browser do not support empty content */
-   visibility: hidden;
-   display: block;
-   height: 0;
-   clear: both;}
+  clear: both; }
 
 .hide {
   display: none; }
@@ -3008,46 +3004,67 @@ th.hide-for-touch {
     display: table-cell !important; }
   th.show-for-print {
     display: table-cell !important; } }
-body{
+
+body {
   font-size: 20px;
-  /*background-color: red;*/
-}
-.list{
+  /*background-color: red;*/ }
+
+.list {
   width: 85%;
   /*background-color: green;*/
   margin-left: 6%;
-  min-width: 400px;
-}
-.list a{
-  background-color: salmon;
+  min-width: 400px; }
+
+.list a {
+  /*background-color: salmon;*/
   color: black;
   /*height: 200px;*/
+  border: solid black 2px;
   display: block;
   margin-bottom: 20px;
-  border-radius: 15px;
-}
-a input[type='checkbox']:before { 
-  content:""; 
-  display:inline-block; 
-  width:51px; 
-  height:51px; 
-  position: relative;
+  border-radius: 15px; }
+
+a input[type='checkbox']:before {
+  content: "";
+  display: inline-block;
+  width: 51px;
+  height: 51px;
   background-image: url("../assets/unchecked_checkbox.png");
   background-size: cover;
-}
-input[type='checkbox']:checked:before { 
-  background-image: url("../assets/checked_checkbox.png");
-}
-a p{
+  background-color: white; }
+
+input[type='checkbox']:checked:before {
+  background-image: url("../assets/checked_checkbox.png"); }
+
+a input[type='checkbox'] {
+  margin-left: 25px;
+  padding-left: 25px;
+  display: inline-block; }
+
+a p {
   font-size: 26px;
   -ms-word-break: normal;
   word-break: Wrapped;
   text-align: center;
-}
-a div{
+  width: auto;
+  overflow: hidden;
+  padding-right: 56px;
+  padding-left: 56px;
+  margin-bottom: 30px;
+  margin-top: -25px; }
+
+a div {
   -ms-word-break: normal;
   word-break: Wrapped;
   border-top: solid black 1px;
-  margin-top: -15px;
-  margin-bottom: 25px;
-}
+  margin-bottom: 40px;
+  padding-right: 42px;
+  padding-left: 42px;
+  width: auto;
+  overflow: hidden; }
+
+a button {
+  margin-left: 42px; }
+
+h1 {
+  margin-left: 10%; }

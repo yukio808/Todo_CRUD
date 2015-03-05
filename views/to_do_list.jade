@@ -12,12 +12,21 @@ html
       section.list
         each listItem in listItems
           a(href='/todos/#{listItem._id}/edit')
-            input.checkbox(type="checkbox", data-list="#{listItem._id}" action="/todos/#{listItem._id}/complete", method="PUT")
-            p!= listItem.todo
-            div!= listItem.details
-            form.clearfix(action="/todos/#{listItem._id}?_method=DELETE", method="POST")
-              //- button acts as "submit" to issue the POST request (really DELETE)
-              button x
-            //- p!= listItem._id
+            if (listItem.is_done)
+              input.checkbox(type="checkbox", data-list="#{listItem._id}" action="/todos/#{listItem._id}/complete", checked='checked')
+              p!= listItem.todo
+              div!= listItem.details
+              form.clearfix(action="/todos/#{listItem._id}?_method=DELETE", method="POST")
+                //- button acts as "submit" to issue the POST request (really DELETE)
+                button DELETE
+              //- p!= listItem._id
+            else 
+              input.roundedtwo.checkbox(type="checkbox", data-list="#{listItem._id}" action="/todos/#{listItem._id}/complete")
+              p!= listItem.todo
+              div!= listItem.details
+              form.clearfix(action="/todos/#{listItem._id}?_method=DELETE", method="POST")
+                //- button acts as "submit" to issue the POST request (really DELETE)
+                button DELETE
+              //- p!= listItem._id
     a(href="/new-todo/")
       button new

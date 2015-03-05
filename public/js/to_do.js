@@ -1,5 +1,6 @@
 $(function(){
   $('div.toDo section.list input[type=checkbox]').change( function (){
+    
     var doc_id = $(this).data('list');
     if ($(this).prop("checked")) {
       $.ajax({

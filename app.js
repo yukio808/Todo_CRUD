@@ -2,6 +2,8 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
+var livereload = require('connect-livereload');
+var livereloadport = 35729;
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/todolist');
 var Schema = mongoose.Schema;
@@ -21,7 +23,9 @@ app.use(bodyParser.urlencoded({extended : true}));
 app.use(bodyParser.json());
 app.set('view engine', 'jade');
 app.use(methodOverride('_method'));
-////
+// Add live reload
+app.use(livereload({port: livereloadport}));
+////////////
 
 app.get('/', function (req, res){
   console.log("Connected to Homepage");
@@ -95,5 +99,5 @@ var server = app.listen(3000, function(){
   var host = server.address().address;
   var port = server.address().port;
 
-  console.log('ToDoList app listening at http://%s:%s', host, port);
+  console.log('Gulp Sass Livereload Foundation Express app listening at http://%s:%s', host, port);
 });
