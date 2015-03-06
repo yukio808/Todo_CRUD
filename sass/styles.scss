@@ -1,26 +1,41 @@
 @import "http://fonts.googleapis.com/css?family=Open+Sans:400,300.css";
 @import "partials/settings";
 @import "partials/foundation";
+@import url(http://fonts.googleapis.com/css?family=Bangers);
 
 body{
-  font-size: 20px;
+  font-size: 16px;
+  // background-color: red;
   /*background-color: red;*/
+  // background-image: url('http://www.appladesign.net/domains/create//documents/dots_266.png');
+  // background-size: cover;
 }
 .list{
-  width: 85%;
+  // width: 60%;
   /*background-color: green;*/
   margin-left: 6%;
-  min-width: 400px;
+  // min-width: 400px;
+  // max-width: 401px;
+  background: none;
+  display: inline-block;
 }
 .list a{
   /*background-color: salmon;*/
   color: black;
   /*height: 200px;*/
   border: solid black 2px;
-  display: block;
+  display: inline-block;
   margin-bottom: 20px;
   border-radius: 15px;
+  float: left;
+  min-width: 450px;
+  max-width: 451px;
+  height: 450px;
+  overflow: hidden;
+  margin-right: 20px;
+
 }
+
 a input[type='checkbox']:before { 
   content:""; 
   display:inline-block; 
@@ -29,31 +44,38 @@ a input[type='checkbox']:before {
   background-image: url("../assets/unchecked_checkbox.png");
   background-size: cover;
   background-color: white;
-  // margin-left: 25px;
+  margin-left: -15px;
+  border-radius: 10px;
 }
+
 input[type='checkbox']:checked:before { 
   background-image: url("../assets/checked_checkbox.png");
+  border-radius: 10px;
   // margin-left: 25px;
 }
+
 a input[type='checkbox'] {
-  margin-left: 25px;
+  margin-left: 29px;
   padding-left: 25px;
   display: inline-block;
+  border-radius: 10px;
   // display: block;
 }
+
 a p{
-  font-size: 26px;
+  font-size: 18px;
   -ms-word-break: normal;
   word-break: Wrapped;
   text-align: center;
   width: auto;
-  overflow: hidden;
+  height:30px;
   padding-right: 56px;
-  padding-left: 56px;
+  padding-left:65px;
   margin-bottom: 30px;
   margin-top: -25px;
 }
-a div{
+
+a div.listitem{
   -ms-word-break: normal;
   word-break: Wrapped;
   border-top: solid black 1px;
@@ -63,10 +85,34 @@ a div{
   padding-left: 42px;
   width: auto;
   overflow: hidden;
+  // margin-top: 25px;
+  padding-top: 25px;
+  font-size: 14px;
+  // background-color: red;
+  height: 260px;
 }
+
 a button{
-  margin-left: 42px;
+  margin-left: 20px;
+  float: left;
+  padding: auto;
 }
+
 h1{
-  margin-left: 10%;
+  margin-left: 6%;
+  font-family: 'Bangers', cursive;
+}
+
+body .intro{
+  margin-left: 6%;
+  margin-bottom: 25px;
+}
+
+.list div img{
+  max-width: 320px;
+  max-height: 220px;
+}
+a.new button{
+  margin-left: 6%;
+  // background-color: red; 
 }

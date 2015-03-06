@@ -1,6 +1,6 @@
 $(function(){
-  $('div.toDo section.list a input[type=checkbox]').change( function (){
-    // alert("hello");
+  $('div.toDo section.list input[type=checkbox]').change( function (){
+    
     var doc_id = $(this).data('list');
     if ($(this).prop("checked")) {
       $.ajax({
@@ -35,9 +35,4 @@ $(function(){
       type : 'PUT'
     });
   });
-  // $('.list a .collapse').on("click", function(){
-  //   $('.list a').toggle(function (){
-  //     $('.list a').css({"height" : "auto"});
-  //   });
-  // });
 });
