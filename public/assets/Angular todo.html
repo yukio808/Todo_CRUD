@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://127.0.0.1:3000/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+  <meta charset="UTF-8">
+  <title>Angular todo</title>
+</head>
+<body ng-app="TodoApp" class="ng-scope">
+  
+  <div ng-controller="TodoController" class="ng-scope">
+    <h1>TodoApp</h1>
+    <div>
+      
+      <input type="text" ng-model="new_todo" ng-press="enter_saves($event)" class="ng-pristine ng-untouched ng-valid"><!--input tag for a new h element-->
+      <button ng-click="save_todo(new_todo)">Add</button>
+    
+    </div>
+
+    <div>
+      <label for="search_input">Search:</label>
+      <input id="searh_input" type="text" ng-model="searchQuery" class="ng-pristine ng-untouched ng-valid">
+    </div>
+
+
+    <ul>
+      <!-- ngRepeat: todo in todos | filter: searchQuery --><li ng-repeat="todo in todos | filter: searchQuery" class="ng-scope">
+        <input type="checkbox" ng-checked="true" checked="checked">
+        <span class="title ng-binding">hello worlds</span>
+      </li><!-- end ngRepeat: todo in todos | filter: searchQuery --><li ng-repeat="todo in todos | filter: searchQuery" class="ng-scope">
+        <input type="checkbox" ng-checked="false">
+        <span class="title ng-binding">delete me</span>
+      </li><!-- end ngRepeat: todo in todos | filter: searchQuery --><li ng-repeat="todo in todos | filter: searchQuery" class="ng-scope">
+        <input type="checkbox" ng-checked="false">
+        <span class="title ng-binding">sdfgh</span>
+      </li><!-- end ngRepeat: todo in todos | filter: searchQuery --><li ng-repeat="todo in todos | filter: searchQuery" class="ng-scope">
+        <input type="checkbox" ng-checked="false">
+        <span class="title ng-binding"></span>
+      </li><!-- end ngRepeat: todo in todos | filter: searchQuery --><li ng-repeat="todo in todos | filter: searchQuery" class="ng-scope">
+        <input type="checkbox" ng-checked="false">
+        <span class="title ng-binding"></span>
+      </li><!-- end ngRepeat: todo in todos | filter: searchQuery --><li ng-repeat="todo in todos | filter: searchQuery" class="ng-scope">
+        <input type="checkbox" ng-checked="false">
+        <span class="title ng-binding"></span>
+      </li><!-- end ngRepeat: todo in todos | filter: searchQuery --><li ng-repeat="todo in todos | filter: searchQuery" class="ng-scope">
+        <input type="checkbox" ng-checked="false">
+        <span class="title ng-binding"></span>
+      </li><!-- end ngRepeat: todo in todos | filter: searchQuery --><li ng-repeat="todo in todos | filter: searchQuery" class="ng-scope">
+        <input type="checkbox" ng-checked="false">
+        <span class="title ng-binding"></span>
+      </li><!-- end ngRepeat: todo in todos | filter: searchQuery --><li ng-repeat="todo in todos | filter: searchQuery" class="ng-scope">
+        <input type="checkbox" ng-checked="false">
+        <span class="title ng-binding">sdfg</span>
+      </li><!-- end ngRepeat: todo in todos | filter: searchQuery --><li ng-repeat="todo in todos | filter: searchQuery" class="ng-scope">
+        <input type="checkbox" ng-checked="false">
+        <span class="title ng-binding">hsdfgh</span>
+      </li><!-- end ngRepeat: todo in todos | filter: searchQuery --><li ng-repeat="todo in todos | filter: searchQuery" class="ng-scope">
+        <input type="checkbox" ng-checked="false">
+        <span class="title ng-binding">sdfghj</span>
+      </li><!-- end ngRepeat: todo in todos | filter: searchQuery --><li ng-repeat="todo in todos | filter: searchQuery" class="ng-scope">
+        <input type="checkbox" ng-checked="false">
+        <span class="title ng-binding">sdfgh</span>
+      </li><!-- end ngRepeat: todo in todos | filter: searchQuery --><li ng-repeat="todo in todos | filter: searchQuery" class="ng-scope">
+        <input type="checkbox" ng-checked="false">
+        <span class="title ng-binding">sdfg</span>
+      </li><!-- end ngRepeat: todo in todos | filter: searchQuery --><li ng-repeat="todo in todos | filter: searchQuery" class="ng-scope">
+        <input type="checkbox" ng-checked="false">
+        <span class="title ng-binding"></span>
+      </li><!-- end ngRepeat: todo in todos | filter: searchQuery -->
+    </ul>
+
+  </div>
+
+
+  <script src="./Angular todo_files/angular.js"></script>
+  <script src="./Angular todo_files/app.js"></script>
+  <script src="./Angular todo_files/TodoService.js"></script>
+
+
+</body></html>
