@@ -56,10 +56,12 @@ input[type='checkbox']:checked:before {
 
 a input[type='checkbox'] {
   margin-left: 29px;
-  padding-left: 25px;
   display: inline-block;
   border-radius: 10px;
   // display: block;
+  height: 51px;
+  width: 51px;
+  margin-top: 10px;
 }
 
 a p{
@@ -72,7 +74,7 @@ a p{
   padding-right: 56px;
   padding-left:65px;
   margin-bottom: 30px;
-  margin-top: -25px;
+  margin-top: -50px;
 }
 
 a div.listitem{
